@@ -39,5 +39,15 @@ extension CollegeListViewController: UITableViewDelegate, UITableViewDataSource{
         cell.college = arrCollege[indexPath.row]
         return cell
     }
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            // delete from index and coredatabase 
+            arrCollege = DatabaseHelper.shareInstance.deleteCollegeData(index: indexPath.row)
+            self.collegeListTableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
 }
 

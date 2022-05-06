@@ -38,4 +38,16 @@ class DatabaseHelper: NSObject {
         return arrCollege
     }
     
+    func deleteCollegeData(index: Int) -> [College]{
+        var collegeData = self.getAllCollegeData()
+        context.delete(collegeData[index])
+        collegeData.remove(at: index)
+        do{
+            try context.save()
+        }catch let err{
+            print("delete college data:- \(err.localizedDescription)")
+        }
+        return collegeData
+    }
+    
 }
