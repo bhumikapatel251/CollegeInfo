@@ -31,6 +31,7 @@ class CollegeFormViewController: UIViewController {
 extension CollegeFormViewController{
     @IBAction func btnCollegeSaveClicked(_ sender: UIButton) {
         self.collegeSaveData()
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
