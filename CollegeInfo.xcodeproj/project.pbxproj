@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		AC6BD2D82823DA590020BCBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD2D72823DA590020BCBC /* AppDelegate.swift */; };
 		AC6BD2DA2823DA590020BCBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD2D92823DA590020BCBC /* SceneDelegate.swift */; };
-		AC6BD2DC2823DA590020BCBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD2DB2823DA590020BCBC /* ViewController.swift */; };
+		AC6BD2DC2823DA590020BCBC /* CollegeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD2DB2823DA590020BCBC /* CollegeListViewController.swift */; };
 		AC6BD2DF2823DA590020BCBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6BD2DD2823DA590020BCBC /* Main.storyboard */; };
 		AC6BD2E22823DA590020BCBC /* CollegeInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD2E02823DA590020BCBC /* CollegeInfo.xcdatamodeld */; };
 		AC6BD2E42823DA5A0020BCBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6BD2E32823DA5A0020BCBC /* Assets.xcassets */; };
@@ -17,6 +17,9 @@
 		AC6BD2F22823DA5A0020BCBC /* CollegeInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD2F12823DA5A0020BCBC /* CollegeInfoTests.swift */; };
 		AC6BD2FC2823DA5A0020BCBC /* CollegeInfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD2FB2823DA5A0020BCBC /* CollegeInfoUITests.swift */; };
 		AC6BD2FE2823DA5A0020BCBC /* CollegeInfoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD2FD2823DA5A0020BCBC /* CollegeInfoUITestsLaunchTests.swift */; };
+		AC6BD30B2823DCB40020BCBC /* CollegeFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD30A2823DCB40020BCBC /* CollegeFormViewController.swift */; };
+		AC6BD30E2823DEB00020BCBC /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD30D2823DEB00020BCBC /* DatabaseHelper.swift */; };
+		ACDAE9AA2825284A002CDB47 /* CollegeListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE9A92825284A002CDB47 /* CollegeListViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +43,7 @@
 		AC6BD2D42823DA590020BCBC /* CollegeInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollegeInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6BD2D72823DA590020BCBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC6BD2D92823DA590020BCBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AC6BD2DB2823DA590020BCBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC6BD2DB2823DA590020BCBC /* CollegeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeListViewController.swift; sourceTree = "<group>"; };
 		AC6BD2DE2823DA590020BCBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC6BD2E12823DA590020BCBC /* CollegeInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CollegeInfo.xcdatamodel; sourceTree = "<group>"; };
 		AC6BD2E32823DA5A0020BCBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +54,9 @@
 		AC6BD2F72823DA5A0020BCBC /* CollegeInfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollegeInfoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6BD2FB2823DA5A0020BCBC /* CollegeInfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeInfoUITests.swift; sourceTree = "<group>"; };
 		AC6BD2FD2823DA5A0020BCBC /* CollegeInfoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeInfoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AC6BD30A2823DCB40020BCBC /* CollegeFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeFormViewController.swift; sourceTree = "<group>"; };
+		AC6BD30D2823DEB00020BCBC /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
+		ACDAE9A92825284A002CDB47 /* CollegeListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeListViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +107,11 @@
 		AC6BD2D62823DA590020BCBC /* CollegeInfo */ = {
 			isa = PBXGroup;
 			children = (
+				ACDAE9A728252599002CDB47 /* View */,
+				AC6BD30F2823DEB50020BCBC /* Controller */,
+				AC6BD30C2823DE720020BCBC /* DatabaseHelper */,
 				AC6BD2D72823DA590020BCBC /* AppDelegate.swift */,
 				AC6BD2D92823DA590020BCBC /* SceneDelegate.swift */,
-				AC6BD2DB2823DA590020BCBC /* ViewController.swift */,
 				AC6BD2DD2823DA590020BCBC /* Main.storyboard */,
 				AC6BD2E32823DA5A0020BCBC /* Assets.xcassets */,
 				AC6BD2E52823DA5A0020BCBC /* LaunchScreen.storyboard */,
@@ -128,6 +136,47 @@
 				AC6BD2FD2823DA5A0020BCBC /* CollegeInfoUITestsLaunchTests.swift */,
 			);
 			path = CollegeInfoUITests;
+			sourceTree = "<group>";
+		};
+		AC6BD30C2823DE720020BCBC /* DatabaseHelper */ = {
+			isa = PBXGroup;
+			children = (
+				AC6BD30D2823DEB00020BCBC /* DatabaseHelper.swift */,
+			);
+			path = DatabaseHelper;
+			sourceTree = "<group>";
+		};
+		AC6BD30F2823DEB50020BCBC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC6BD3102823DEC20020BCBC /* College */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AC6BD3102823DEC20020BCBC /* College */ = {
+			isa = PBXGroup;
+			children = (
+				AC6BD2DB2823DA590020BCBC /* CollegeListViewController.swift */,
+				AC6BD30A2823DCB40020BCBC /* CollegeFormViewController.swift */,
+			);
+			path = College;
+			sourceTree = "<group>";
+		};
+		ACDAE9A728252599002CDB47 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACDAE9A8282527F7002CDB47 /* CollegeCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACDAE9A8282527F7002CDB47 /* CollegeCell */ = {
+			isa = PBXGroup;
+			children = (
+				ACDAE9A92825284A002CDB47 /* CollegeListViewCell.swift */,
+			);
+			path = CollegeCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +310,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC6BD2DC2823DA590020BCBC /* ViewController.swift in Sources */,
+				AC6BD2DC2823DA590020BCBC /* CollegeListViewController.swift in Sources */,
+				ACDAE9AA2825284A002CDB47 /* CollegeListViewCell.swift in Sources */,
 				AC6BD2D82823DA590020BCBC /* AppDelegate.swift in Sources */,
 				AC6BD2DA2823DA590020BCBC /* SceneDelegate.swift in Sources */,
 				AC6BD2E22823DA590020BCBC /* CollegeInfo.xcdatamodeld in Sources */,
+				AC6BD30E2823DEB00020BCBC /* DatabaseHelper.swift in Sources */,
+				AC6BD30B2823DCB40020BCBC /* CollegeFormViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

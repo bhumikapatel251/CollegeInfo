@@ -1,24 +1,247 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dWb-T9-78e">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--College List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CollegeListViewController" id="BYZ-38-t0r" customClass="CollegeListViewController" customModule="CollegeInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kwc-UE-l2J">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CollegeListViewCell" rowHeight="198" id="rGf-kP-ftg" customClass="CollegeListViewCell" customModule="CollegeInfo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="198"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rGf-kP-ftg" id="YBT-AX-ffX">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="198"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxx-cu-vqi">
+                                                    <rect key="frame" x="10" y="20" width="394" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="tGu-nS-Ixm"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3v2-ua-ZhG">
+                                                    <rect key="frame" x="10" y="70" width="394" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="QsB-Vy-fHe"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYC-Al-W7v">
+                                                    <rect key="frame" x="10" y="120" width="394" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="kAm-Vu-A2p"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kxx-cu-vqi" firstAttribute="top" secondItem="YBT-AX-ffX" secondAttribute="top" constant="20" id="2kJ-uH-Dwz"/>
+                                                <constraint firstItem="hYC-Al-W7v" firstAttribute="leading" secondItem="YBT-AX-ffX" secondAttribute="leading" constant="10" id="73T-Ps-qBU"/>
+                                                <constraint firstAttribute="trailing" secondItem="kxx-cu-vqi" secondAttribute="trailing" constant="10" id="LfE-p8-4iF"/>
+                                                <constraint firstItem="kxx-cu-vqi" firstAttribute="leading" secondItem="YBT-AX-ffX" secondAttribute="leading" constant="10" id="NNW-P4-jTA"/>
+                                                <constraint firstItem="hYC-Al-W7v" firstAttribute="top" secondItem="3v2-ua-ZhG" secondAttribute="bottom" constant="20" id="QGz-7T-mSF"/>
+                                                <constraint firstAttribute="trailing" secondItem="3v2-ua-ZhG" secondAttribute="trailing" constant="10" id="blz-UZ-nsI"/>
+                                                <constraint firstItem="3v2-ua-ZhG" firstAttribute="leading" secondItem="YBT-AX-ffX" secondAttribute="leading" constant="10" id="c3v-wn-l2u"/>
+                                                <constraint firstItem="3v2-ua-ZhG" firstAttribute="top" secondItem="kxx-cu-vqi" secondAttribute="bottom" constant="20" id="gYE-Or-IxM"/>
+                                                <constraint firstAttribute="trailing" secondItem="hYC-Al-W7v" secondAttribute="trailing" constant="10" id="nWb-L1-TxB"/>
+                                                <constraint firstAttribute="bottom" secondItem="hYC-Al-W7v" secondAttribute="bottom" constant="47" id="vDW-mL-0t7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblCollegeCity" destination="3v2-ua-ZhG" id="Lfh-Lx-iv8"/>
+                                            <outlet property="lblCollegeName" destination="kxx-cu-vqi" id="bOO-Ug-O96"/>
+                                            <outlet property="lblCollegeUniversity" destination="hYC-Al-W7v" id="GoK-jz-gHA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Y2I-Bp-a0J"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="NTw-1X-6Jy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kwc-UE-l2J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9TA-9o-Gte"/>
+                            <constraint firstItem="kwc-UE-l2J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GFH-84-2sW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kwc-UE-l2J" secondAttribute="trailing" id="SNL-v4-xyn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kwc-UE-l2J" secondAttribute="bottom" id="vE2-FP-YR1"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="0Fl-oB-qlA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="H8L-QR-EXg">
+                            <connections>
+                                <action selector="btnCollegeAddClicked:" destination="BYZ-38-t0r" id="H1y-bJ-SQh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collegeListTableView" destination="kwc-UE-l2J" id="Yd1-4v-e9k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="257.97101449275362" y="105.80357142857143"/>
+        </scene>
+        <!--College Form View Controller-->
+        <scene sceneID="aBo-OL-3hu">
+            <objects>
+                <viewController storyboardIdentifier="CollegeFormViewController" id="M18-FP-4Tr" customClass="CollegeFormViewController" customModule="CollegeInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fy7-tu-E8y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSg-L2-IlZ">
+                                <rect key="frame" x="41.5" y="179" width="331" height="538"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter College Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zaL-fl-hnw">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="30"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" keyboardKey="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ZaF-3Q-FMX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter College Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vuY-Yj-aOI">
+                                        <rect key="frame" x="0.0" y="38" width="331" height="30"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" keyboardKey="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ZaK-ec-wl2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter College University" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ulk-sp-uw5">
+                                        <rect key="frame" x="0.0" y="76" width="331" height="30"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" keyboardKey="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="aIm-8o-KlN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter College City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xVq-3X-Knf">
+                                        <rect key="frame" x="0.0" y="114" width="331" height="30"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" keyboardKey="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="h8U-na-awb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brI-gf-Whr">
+                                        <rect key="frame" x="0.0" y="508" width="331" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="pp5-QX-KZx"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Save">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnCollegeSaveClicked:" destination="M18-FP-4Tr" eventType="touchUpInside" id="Xhr-mE-KCs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Ulk-sp-uw5" firstAttribute="top" secondItem="vuY-Yj-aOI" secondAttribute="bottom" constant="8" id="0WU-YK-IlL"/>
+                                    <constraint firstItem="Ulk-sp-uw5" firstAttribute="leading" secondItem="NSg-L2-IlZ" secondAttribute="leading" id="AS2-HN-sdb"/>
+                                    <constraint firstAttribute="bottom" secondItem="brI-gf-Whr" secondAttribute="bottom" id="BIA-sB-ccO"/>
+                                    <constraint firstItem="xVq-3X-Knf" firstAttribute="leading" secondItem="NSg-L2-IlZ" secondAttribute="leading" id="QN1-92-3q7"/>
+                                    <constraint firstItem="zaL-fl-hnw" firstAttribute="top" secondItem="NSg-L2-IlZ" secondAttribute="top" id="RSM-PM-fbU"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ulk-sp-uw5" secondAttribute="trailing" id="SKI-Oj-cJP"/>
+                                    <constraint firstItem="brI-gf-Whr" firstAttribute="leading" secondItem="NSg-L2-IlZ" secondAttribute="leading" id="SKs-pC-WQq"/>
+                                    <constraint firstAttribute="trailing" secondItem="xVq-3X-Knf" secondAttribute="trailing" id="Val-6Z-w9q"/>
+                                    <constraint firstItem="xVq-3X-Knf" firstAttribute="top" secondItem="Ulk-sp-uw5" secondAttribute="bottom" constant="8" id="ZZi-RJ-sBV"/>
+                                    <constraint firstAttribute="trailing" secondItem="brI-gf-Whr" secondAttribute="trailing" id="bZq-wN-XRq"/>
+                                    <constraint firstItem="zaL-fl-hnw" firstAttribute="leading" secondItem="NSg-L2-IlZ" secondAttribute="leading" id="c31-gs-97T"/>
+                                    <constraint firstItem="vuY-Yj-aOI" firstAttribute="leading" secondItem="NSg-L2-IlZ" secondAttribute="leading" id="fOI-d3-XCQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="vuY-Yj-aOI" secondAttribute="trailing" id="knr-ZG-QDY"/>
+                                    <constraint firstAttribute="trailing" secondItem="zaL-fl-hnw" secondAttribute="trailing" id="q1C-rq-mRL"/>
+                                    <constraint firstItem="vuY-Yj-aOI" firstAttribute="top" secondItem="zaL-fl-hnw" secondAttribute="bottom" constant="8" id="v4C-Fy-fS3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Kbk-2u-K1k"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NSg-L2-IlZ" firstAttribute="width" secondItem="fy7-tu-E8y" secondAttribute="width" multiplier="0.8" id="dVF-Dk-O3l"/>
+                            <constraint firstItem="NSg-L2-IlZ" firstAttribute="height" secondItem="fy7-tu-E8y" secondAttribute="height" multiplier="0.6" id="dfQ-En-Un2"/>
+                            <constraint firstItem="NSg-L2-IlZ" firstAttribute="centerX" secondItem="fy7-tu-E8y" secondAttribute="centerX" id="kCo-Ia-P67"/>
+                            <constraint firstItem="NSg-L2-IlZ" firstAttribute="centerY" secondItem="fy7-tu-E8y" secondAttribute="centerY" id="zG0-yp-I78"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtCollegeAddress" destination="vuY-Yj-aOI" id="WWB-kC-wV3"/>
+                        <outlet property="txtCollegeCity" destination="xVq-3X-Knf" id="cDJ-NR-sG2"/>
+                        <outlet property="txtCollegeName" destination="zaL-fl-hnw" id="7Jz-Rg-dBA"/>
+                        <outlet property="txtCollegeUniversity" destination="Ulk-sp-uw5" id="Jv1-eY-3gQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k6K-f2-mpS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="106"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hl3-7B-Xcv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dWb-T9-78e" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n9Z-ec-Gzq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5Yp-eI-VnZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uda-4Q-GhZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-413" y="106"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
