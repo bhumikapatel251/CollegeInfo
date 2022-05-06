@@ -20,6 +20,7 @@
 		AC6BD30B2823DCB40020BCBC /* CollegeFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD30A2823DCB40020BCBC /* CollegeFormViewController.swift */; };
 		AC6BD30E2823DEB00020BCBC /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD30D2823DEB00020BCBC /* DatabaseHelper.swift */; };
 		ACDAE9AA2825284A002CDB47 /* CollegeListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE9A92825284A002CDB47 /* CollegeListViewCell.swift */; };
+		ACDAE9AC28253D54002CDB47 /* CollegeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE9AB28253D54002CDB47 /* CollegeDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		AC6BD30A2823DCB40020BCBC /* CollegeFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeFormViewController.swift; sourceTree = "<group>"; };
 		AC6BD30D2823DEB00020BCBC /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		ACDAE9A92825284A002CDB47 /* CollegeListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeListViewCell.swift; sourceTree = "<group>"; };
+		ACDAE9AB28253D54002CDB47 /* CollegeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			children = (
 				AC6BD2DB2823DA590020BCBC /* CollegeListViewController.swift */,
 				AC6BD30A2823DCB40020BCBC /* CollegeFormViewController.swift */,
+				ACDAE9AB28253D54002CDB47 /* CollegeDetailViewController.swift */,
 			);
 			path = College;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				AC6BD2DC2823DA590020BCBC /* CollegeListViewController.swift in Sources */,
 				ACDAE9AA2825284A002CDB47 /* CollegeListViewCell.swift in Sources */,
 				AC6BD2D82823DA590020BCBC /* AppDelegate.swift in Sources */,
+				ACDAE9AC28253D54002CDB47 /* CollegeDetailViewController.swift in Sources */,
 				AC6BD2DA2823DA590020BCBC /* SceneDelegate.swift in Sources */,
 				AC6BD2E22823DA590020BCBC /* CollegeInfo.xcdatamodeld in Sources */,
 				AC6BD30E2823DEB00020BCBC /* DatabaseHelper.swift in Sources */,
