@@ -18,10 +18,15 @@ class CollegeFormViewController: UIViewController {
     @IBOutlet var btnSave: UIButton!
     var isUpdate = false
     var indexRow = Int()
+    var collegeDetails: College?
     
     //MARK: VIEW LIFECYCLES
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.txtCollegeName.text = collegeDetails?.name
+        self.txtCollegeAddress.text = collegeDetails?.address
+        self.txtCollegeUniversity.text = collegeDetails?.university
+        self.txtCollegeCity.text = collegeDetails?.city
 
         
     }
