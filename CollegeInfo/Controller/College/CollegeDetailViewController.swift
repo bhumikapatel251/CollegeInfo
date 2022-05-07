@@ -9,6 +9,15 @@ import UIKit
 
 class CollegeDetailViewController: UITableViewController {
 
+    @IBOutlet var lblCollegeCity: UILabel!
+    @IBOutlet var lblCollegeUniversity: UILabel!
+    @IBOutlet var lblCollegeAddress: UILabel!
+    @IBOutlet var lblCollegeName: UILabel!
+    var collegeDetail: College?{
+        didSet{
+            print(collegeDetail)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
