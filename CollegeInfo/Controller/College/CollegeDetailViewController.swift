@@ -15,6 +15,7 @@ class CollegeDetailViewController: UITableViewController {
    @IBOutlet var lblCollegeAddress: UILabel!
     @IBOutlet var lblCollegeName: UILabel!
     var collegeDetail: College?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,5 +28,9 @@ class CollegeDetailViewController: UITableViewController {
         lblCollegeAddress.text = collegeDetail?.address ?? ""
         lblCollegeCity.text = collegeDetail?.city ?? ""
         lblCollegeUniversity.text = collegeDetail?.university ?? ""
+    }
+    @IBAction func btnEditClicked(_ sender: UIBarButtonItem) {
+        let formVc = self.storyboard?.instantiateViewController(withIdentifier: "CollegeFormViewController") as! CollegeFormViewController
+        self.navigationController?.pushViewController(formVc, animated: false   )
     }
 }

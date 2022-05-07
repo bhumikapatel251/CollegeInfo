@@ -14,6 +14,8 @@ class CollegeFormViewController: UIViewController {
     @IBOutlet var txtCollegeAddress: UITextField!
     @IBOutlet var txtCollegeUniversity: UITextField!
     @IBOutlet var txtCollegeCity: UITextField!
+    var isUpdate = false
+    var indexRow = Int()
     
     //MARK: VIEW LIFECYCLES
     override func viewDidLoad() {
