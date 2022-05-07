@@ -23,8 +23,31 @@
                     <view key="view" contentMode="scaleToFill" id="3Pf-l2-nx3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LrP-Cx-9M2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="166" id="pUX-sy-vYF">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="166"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pUX-sy-vYF" id="aPh-0b-ypk">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="166"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="V4m-9y-k66"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LrP-Cx-9M2" firstAttribute="leading" secondItem="V4m-9y-k66" secondAttribute="leading" id="0rH-JW-UPj"/>
+                            <constraint firstItem="V4m-9y-k66" firstAttribute="bottom" secondItem="LrP-Cx-9M2" secondAttribute="bottom" id="1Cj-g8-4OX"/>
+                            <constraint firstItem="LrP-Cx-9M2" firstAttribute="top" secondItem="V4m-9y-k66" secondAttribute="top" id="gTf-8X-zbv"/>
+                            <constraint firstItem="V4m-9y-k66" firstAttribute="trailing" secondItem="LrP-Cx-9M2" secondAttribute="trailing" id="ghi-wb-tZe"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yZd-OI-0NN">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="u5e-Zb-9qA">
@@ -33,10 +56,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="studentTableView" destination="LrP-Cx-9M2" id="Yjv-ns-izp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d36-G1-mDG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1977" y="-1434"/>
+            <point key="canvasLocation" x="-1978.2608695652175" y="-1434.375"/>
         </scene>
         <!--Student Form View Controller-->
         <scene sceneID="VM5-gN-L7d">

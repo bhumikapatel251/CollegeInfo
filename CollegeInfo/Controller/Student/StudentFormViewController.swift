@@ -20,16 +20,32 @@ class StudentFormViewController: UIViewController {
     }
     
     @IBAction func btnSaveStudentClicked(_ sender: UIButton) {
+        self.StudentSaveData()
     }
-    
-    /*
-    // MARK: - Navigation
+ 
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+}
+// Methods
+extension StudentFormViewController{
+    func StudentSaveData(){
+        guard let studentName = txtStudentName.text else { return }
+        guard let studentAddress = txtStudentAddress.text else { return }
+        guard let studentEmail = txtStudentEmail.text else { return }
+        guard let studentMobile = txtStudentMobile.text else { return }
+        
+        let studentDict = [
+            "studentName": studentName,
+            "studentAddress": studentAddress,
+            "studentEmail": studentEmail,
+            "studentMobile": studentMobile
+            ]
+//        if isUpdate{
+//            DatabaseHelper.shareInstance.editCollegeData(collegeDict: collegeDict, index: indexRow)
+//            isUpdate = false
+//        }else{
+        DatabaseHelper.shareInstance.saveStudentData(StudentDict: studentDict)
+           
+//        }
+       
+     }
 }

@@ -64,4 +64,31 @@ class DatabaseHelper: NSObject {
             
         }
     }
+    // Student
+    func saveStudentData(StudentDict: [String:String]){
+        let student = NSEntityDescription.insertNewObject(forEntityName: "Student", into: context) as! Student
+        
+        student.name = StudentDict["studentName"]
+        student.address = StudentDict["studentAddress"]
+        student.email = StudentDict["studentEmail"]
+        student.mobile = StudentDict["studentMobile"]
+      
+        
+        do{
+            try context.save()
+        }catch let err{
+            print("Student save error:- \(err.localizedDescription)")
+        }
+    }
+    
+    func getAllStudentData() -> [Student]{
+        var arrStudent = [Student]()
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Student")
+        do{
+            arrStudent = try context.fetch(fetchRequest) as! [Student]
+        }catch let err{
+            print("Error in Student fetch :-\(err.localizedDescription)")
+        }
+        return arrStudent
+    }
 }
