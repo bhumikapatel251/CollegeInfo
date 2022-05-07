@@ -31,6 +31,7 @@ class CollegeDetailViewController: UITableViewController {
     }
     @IBAction func btnEditClicked(_ sender: UIBarButtonItem) {
         let formVc = self.storyboard?.instantiateViewController(withIdentifier: "CollegeFormViewController") as! CollegeFormViewController
+        formVc.isUpdate = true
         self.navigationController?.pushViewController(formVc, animated: false   )
     }
 }

@@ -204,6 +204,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnSave" destination="brI-gf-Whr" id="vZb-9E-Ckz"/>
                         <outlet property="txtCollegeAddress" destination="vuY-Yj-aOI" id="WWB-kC-wV3"/>
                         <outlet property="txtCollegeCity" destination="xVq-3X-Knf" id="cDJ-NR-sG2"/>
                         <outlet property="txtCollegeName" destination="zaL-fl-hnw" id="7Jz-Rg-dBA"/>

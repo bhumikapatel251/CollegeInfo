@@ -14,6 +14,8 @@ class CollegeFormViewController: UIViewController {
     @IBOutlet var txtCollegeAddress: UITextField!
     @IBOutlet var txtCollegeUniversity: UITextField!
     @IBOutlet var txtCollegeCity: UITextField!
+    
+    @IBOutlet var btnSave: UIButton!
     var isUpdate = false
     var indexRow = Int()
     
@@ -24,7 +26,13 @@ class CollegeFormViewController: UIViewController {
         
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        if isUpdate{
+            btnSave.setTitle("Update", for: .normal)
+        }else{
+            btnSave.setTitle("Save", for: .normal)
+        }
+    }
     
     
     
