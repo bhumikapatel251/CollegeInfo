@@ -39,9 +39,9 @@ class DatabaseHelper: NSObject {
     }
     
     func deleteCollegeData(index: Int) -> [College]{
-        var collegeData = self.getAllCollegeData()
-        context.delete(collegeData[index])
-        collegeData.remove(at: index)
+        var collegeData = self.getAllCollegeData() // get data
+        context.delete(collegeData[index]) //remove from coredata
+        collegeData.remove(at: index) // remove in arry college
         do{
             try context.save()
         }catch let err{
@@ -50,4 +50,18 @@ class DatabaseHelper: NSObject {
         return collegeData
     }
     
+    func editCollegeData(collegeDict: [String: String], index:Int){
+        var college = self.getAllCollegeData()
+        // origanal data
+        college[index].name = collegeDict["collegeName"] // edit data
+        college[index].address = collegeDict["collegeAddress"]
+        college[index].university = collegeDict["collegeUniversity"]
+        college[index].city = collegeDict["collegeCity"]
+        do{
+            try context.save()
+        }catch{
+            print("error in edit data")
+            
+        }
+    }
 }

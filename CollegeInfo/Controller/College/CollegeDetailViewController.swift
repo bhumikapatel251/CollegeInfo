@@ -15,6 +15,7 @@ class CollegeDetailViewController: UITableViewController {
    @IBOutlet var lblCollegeAddress: UILabel!
     @IBOutlet var lblCollegeName: UILabel!
     var collegeDetail: College?
+    var indexRow = Int()
     
 
     override func viewDidLoad() {
@@ -33,6 +34,7 @@ class CollegeDetailViewController: UITableViewController {
         let formVc = self.storyboard?.instantiateViewController(withIdentifier: "CollegeFormViewController") as! CollegeFormViewController
         formVc.isUpdate = true
         formVc.collegeDetails = collegeDetail
+        formVc.indexRow = indexRow
         self.navigationController?.pushViewController(formVc, animated: false   )
     }
 }

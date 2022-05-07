@@ -64,7 +64,12 @@ extension CollegeFormViewController{
             "collegeUniversity": collegeUniversity,
             "collegeCity": collegeCity
             ]
-        
-        DatabaseHelper.shareInstance.saveCollegeData(CollegeDict: collegeDict)
-            }
+        if isUpdate{
+            DatabaseHelper.shareInstance.editCollegeData(collegeDict: collegeDict, index: indexRow)
+            isUpdate = false
+        }else{
+            DatabaseHelper.shareInstance.saveCollegeData(CollegeDict: collegeDict)
+        }
+       
+     }
 }

@@ -42,7 +42,8 @@ extension CollegeListViewController: UITableViewDelegate, UITableViewDataSource{
    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        let collegeDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "CollegeDetailViewController") as! CollegeDetailViewController
         collegeDetailVC.collegeDetail = arrCollege[indexPath.row]
-       self.navigationController?.pushViewController(collegeDetailVC, animated: true)
+       collegeDetailVC.indexRow = indexPath.row
+       self.navigationController?.pushViewController(collegeDetailVC, animated: false)
    }
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
