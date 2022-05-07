@@ -10,6 +10,7 @@ import UIKit
 class CollegeDetailViewController: UITableViewController {
 
    
+    @IBOutlet var lblStudent: UILabel!
     @IBOutlet var lblCollegeCity: UILabel!
     @IBOutlet var lblCollegeUniversity: UILabel!
    @IBOutlet var lblCollegeAddress: UILabel!
@@ -36,5 +37,13 @@ class CollegeDetailViewController: UITableViewController {
         formVc.collegeDetails = collegeDetail
         formVc.indexRow = indexRow
         self.navigationController?.pushViewController(formVc, animated: false   )
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 4{
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let studentVC = storyboard.instantiateViewController(withIdentifier: "StudentListViewController") as! StudentListViewController
+            self.navigationController?.pushViewController(studentVC, animated: true)
+        }
     }
 }
