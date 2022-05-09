@@ -30,6 +30,11 @@ class CollegeDetailViewController: UITableViewController {
         lblCollegeAddress.text = collegeDetail?.address ?? ""
         lblCollegeCity.text = collegeDetail?.city ?? ""
         lblCollegeUniversity.text = collegeDetail?.university ?? ""
+        if let students = collegeDetail?.students?.allObjects as? [Student]{
+            lblStudent.text = "\(students.count)"
+        }else{
+            lblStudent.text = "0"
+        }
     }
     @IBAction func btnEditClicked(_ sender: UIBarButtonItem) {
         let formVc = self.storyboard?.instantiateViewController(withIdentifier: "CollegeFormViewController") as! CollegeFormViewController
