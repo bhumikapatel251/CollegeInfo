@@ -12,6 +12,8 @@ class StudentFormViewController: UIViewController {
     @IBOutlet var txtStudentAddress: UITextField!
     @IBOutlet var txtStudentName: UITextField!
     @IBOutlet var txtStudentEmail: UITextField!
+    var isUpdate = false
+    var indexRow = Int()
     var college: College?
     override func viewDidLoad() {
         super.viewDidLoad()

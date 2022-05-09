@@ -44,6 +44,11 @@ extension StudentListViewController: UITableViewDelegate, UITableViewDataSource{
         cell.student = arrStudent[indexPath.row]
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let studentDetaliVC = self.storyboard?.instantiateViewController(withIdentifier: "StudentDetailViewController") as! StudentDetailViewController
+        studentDetaliVC.studentDetail = arrStudent[indexPath.row]
+        self.navigationController?.pushViewController(studentDetaliVC, animated: true)
+    }
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC4247BF28292A94002C0E9B /* StudentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4247BE28292A94002C0E9B /* StudentDetailViewController.swift */; };
 		AC5C6DC2282663060088F9D2 /* College.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC5C6DC0282663060088F9D2 /* College.storyboard */; };
 		AC5C6DC628266EFE0088F9D2 /* StudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C6DC528266EFE0088F9D2 /* StudentListViewController.swift */; };
 		AC5C6DC828266F0E0088F9D2 /* StudentFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C6DC728266F0E0088F9D2 /* StudentFormViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC4247BE28292A94002C0E9B /* StudentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailViewController.swift; sourceTree = "<group>"; };
 		AC5C6DC1282663060088F9D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CollegeInfo/Base.lproj/College.storyboard; sourceTree = "<group>"; };
 		AC5C6DC528266EFE0088F9D2 /* StudentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListViewController.swift; sourceTree = "<group>"; };
 		AC5C6DC728266F0E0088F9D2 /* StudentFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentFormViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				AC5C6DC528266EFE0088F9D2 /* StudentListViewController.swift */,
 				AC5C6DC728266F0E0088F9D2 /* StudentFormViewController.swift */,
+				AC4247BE28292A94002C0E9B /* StudentDetailViewController.swift */,
 			);
 			path = Student;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				AC6BD2E22823DA590020BCBC /* CollegeInfo.xcdatamodeld in Sources */,
 				AC6BD30E2823DEB00020BCBC /* DatabaseHelper.swift in Sources */,
 				AC6BD30B2823DCB40020BCBC /* CollegeFormViewController.swift in Sources */,
+				AC4247BF28292A94002C0E9B /* StudentDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
