@@ -65,14 +65,14 @@ class DatabaseHelper: NSObject {
         }
     }
     // Student
-    func saveStudentData(StudentDict: [String:String]){
+    func saveStudentData(StudentDict: [String:String], college: College){
         let student = NSEntityDescription.insertNewObject(forEntityName: "Student", into: context) as! Student
         
         student.name = StudentDict["studentName"]
         student.address = StudentDict["studentAddress"]
         student.email = StudentDict["studentEmail"]
         student.mobile = StudentDict["studentMobile"]
-      
+        student.universites = college
         
         do{
             try context.save()

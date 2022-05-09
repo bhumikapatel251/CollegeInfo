@@ -11,6 +11,7 @@ class StudentListViewController: UIViewController {
     
     @IBOutlet var studentTableView: UITableView!
     var arrStudent = [Student]()
+    var college: College?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.arrStudent = DatabaseHelper.shareInstance.getAllStudentData()
@@ -18,13 +19,17 @@ class StudentListViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.arrStudent = DatabaseHelper.shareInstance.getAllStudentData()
+        if college?.students?.allObjects != nil{
+            arrStudent = college?.students?.allObjects as! [Student]
+        }
+      //  self.arrStudent = DatabaseHelper.shareInstance.getAllStudentData()
         self.studentTableView.reloadData()
     }
     
     @IBAction func btnAddStudentClicked(_ sender: UIBarButtonItem) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let studentFormVC = storyboard.instantiateViewController(withIdentifier: "StudentFormViewController") as! StudentFormViewController
+        studentFormVC.college = college
         self.navigationController?.pushViewController(studentFormVC, animated: true)
     }
    

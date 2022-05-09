@@ -43,6 +43,7 @@ class CollegeDetailViewController: UITableViewController {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let studentVC = storyboard.instantiateViewController(withIdentifier: "StudentListViewController") as! StudentListViewController
+            studentVC.college = collegeDetail
             self.navigationController?.pushViewController(studentVC, animated: true)
         }
     }

@@ -12,6 +12,7 @@ class StudentFormViewController: UIViewController {
     @IBOutlet var txtStudentAddress: UITextField!
     @IBOutlet var txtStudentName: UITextField!
     @IBOutlet var txtStudentEmail: UITextField!
+    var college: College?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +21,7 @@ class StudentFormViewController: UIViewController {
     
     @IBAction func btnSaveStudentClicked(_ sender: UIButton) {
         self.StudentSaveData()
+        self.navigationController?.popViewController(animated: true)
     }
  
 
@@ -31,6 +33,9 @@ extension StudentFormViewController{
         guard let studentAddress = txtStudentAddress.text else { return }
         guard let studentEmail = txtStudentEmail.text else { return }
         guard let studentMobile = txtStudentMobile.text else { return }
+        guard let mainCollege = college else{
+            return
+        }
         
         let studentDict = [
             "studentName": studentName,
@@ -42,7 +47,7 @@ extension StudentFormViewController{
 //            DatabaseHelper.shareInstance.editCollegeData(collegeDict: collegeDict, index: indexRow)
 //            isUpdate = false
 //        }else{
-        DatabaseHelper.shareInstance.saveStudentData(StudentDict: studentDict)
+        DatabaseHelper.shareInstance.saveStudentData(StudentDict: studentDict, college: mainCollege)
            
 //        }
        
