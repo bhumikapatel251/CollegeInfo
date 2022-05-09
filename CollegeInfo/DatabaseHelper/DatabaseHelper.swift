@@ -91,4 +91,15 @@ class DatabaseHelper: NSObject {
         }
         return arrStudent
     }
+    func deleteStudentData(index: Int) -> [Student]{
+        var studentData = self.getAllStudentData() // get data
+        context.delete(studentData[index]) //remove from coredata
+        studentData.remove(at: index) // remove in arry college
+        do{
+            try context.save()
+        }catch let err{
+            print("delete student data:- \(err.localizedDescription)")
+        }
+        return studentData
+    }
 }

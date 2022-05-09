@@ -9,9 +9,10 @@ import UIKit
 
 class StudentListViewCell: UITableViewCell {
 
-    @IBOutlet var lblStudentMobile: UILabel!
-    @IBOutlet var lblStudentEmail: UILabel!
     @IBOutlet var lblStudentName: UILabel!
+    @IBOutlet var lblStudentEmail: UILabel!
+    @IBOutlet var lblStudentMobile: UILabel!
+    
     var student: Student?{
         didSet{
             lblStudentName.text = "Name : \(student?.name ?? "")"

@@ -24,29 +24,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LrP-Cx-9M2">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5om-dr-sdn">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="166" id="pUX-sy-vYF">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="166"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StudentListViewCell" rowHeight="184" id="QoR-Cp-ynf" customClass="StudentListViewCell" customModule="CollegeInfo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="184"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pUX-sy-vYF" id="aPh-0b-ypk">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="166"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QoR-Cp-ynf" id="OjF-r0-wDs">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxg-mb-8Ym">
+                                                    <rect key="frame" x="10" y="20" width="394" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="brB-2H-Krb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2I-VC-kja">
+                                                    <rect key="frame" x="10" y="70" width="394" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="HcD-up-dl1"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmV-AP-DmZ">
+                                                    <rect key="frame" x="10" y="120" width="394" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="sJH-iC-4pu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Wxg-mb-8Ym" secondAttribute="trailing" constant="10" id="049-rH-b6A"/>
+                                                <constraint firstItem="hmV-AP-DmZ" firstAttribute="trailing" secondItem="Q2I-VC-kja" secondAttribute="trailing" id="40M-IF-vHn"/>
+                                                <constraint firstItem="Q2I-VC-kja" firstAttribute="leading" secondItem="OjF-r0-wDs" secondAttribute="leading" constant="10" id="5Ee-n8-n6J"/>
+                                                <constraint firstItem="hmV-AP-DmZ" firstAttribute="top" secondItem="Q2I-VC-kja" secondAttribute="bottom" constant="20" id="ENC-iK-TDs"/>
+                                                <constraint firstAttribute="trailing" secondItem="Q2I-VC-kja" secondAttribute="trailing" constant="10" id="OIg-6e-wsU"/>
+                                                <constraint firstItem="hmV-AP-DmZ" firstAttribute="leading" secondItem="Q2I-VC-kja" secondAttribute="leading" id="RpF-Fy-RK0"/>
+                                                <constraint firstAttribute="bottom" secondItem="hmV-AP-DmZ" secondAttribute="bottom" constant="20" id="kNr-IR-Squ"/>
+                                                <constraint firstItem="Q2I-VC-kja" firstAttribute="top" secondItem="Wxg-mb-8Ym" secondAttribute="bottom" constant="20" id="m55-Kv-Qte"/>
+                                                <constraint firstItem="Wxg-mb-8Ym" firstAttribute="leading" secondItem="OjF-r0-wDs" secondAttribute="leading" constant="10" id="pis-Cl-y7x"/>
+                                                <constraint firstItem="Wxg-mb-8Ym" firstAttribute="top" secondItem="OjF-r0-wDs" secondAttribute="top" constant="20" id="tLq-o0-yMI"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblStudentEmail" destination="Q2I-VC-kja" id="OKN-wq-SoY"/>
+                                            <outlet property="lblStudentMobile" destination="hmV-AP-DmZ" id="Dc7-Us-1P1"/>
+                                            <outlet property="lblStudentName" destination="Wxg-mb-8Ym" id="py2-X7-gef"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="qlB-Je-77O" id="9qp-we-9SU"/>
+                                    <outlet property="delegate" destination="qlB-Je-77O" id="Y6X-to-Q4b"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V4m-9y-k66"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LrP-Cx-9M2" firstAttribute="leading" secondItem="V4m-9y-k66" secondAttribute="leading" id="0rH-JW-UPj"/>
-                            <constraint firstItem="V4m-9y-k66" firstAttribute="bottom" secondItem="LrP-Cx-9M2" secondAttribute="bottom" id="1Cj-g8-4OX"/>
-                            <constraint firstItem="LrP-Cx-9M2" firstAttribute="top" secondItem="V4m-9y-k66" secondAttribute="top" id="gTf-8X-zbv"/>
-                            <constraint firstItem="V4m-9y-k66" firstAttribute="trailing" secondItem="LrP-Cx-9M2" secondAttribute="trailing" id="ghi-wb-tZe"/>
+                            <constraint firstItem="V4m-9y-k66" firstAttribute="bottom" secondItem="5om-dr-sdn" secondAttribute="bottom" id="DAS-0f-i0G"/>
+                            <constraint firstItem="V4m-9y-k66" firstAttribute="trailing" secondItem="5om-dr-sdn" secondAttribute="trailing" id="LdV-nV-efi"/>
+                            <constraint firstItem="5om-dr-sdn" firstAttribute="leading" secondItem="V4m-9y-k66" secondAttribute="leading" id="atQ-Sx-nlK"/>
+                            <constraint firstItem="5om-dr-sdn" firstAttribute="top" secondItem="V4m-9y-k66" secondAttribute="top" id="gGv-Ck-ZfK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yZd-OI-0NN">
@@ -57,7 +106,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="studentTableView" destination="LrP-Cx-9M2" id="Yjv-ns-izp"/>
+                        <outlet property="studentTableView" destination="5om-dr-sdn" id="RPi-BL-y3P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d36-G1-mDG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -105,7 +154,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3n-ox-O10">
-                                <rect key="frame" x="50" y="688" width="314" height="35"/>
+                                <rect key="frame" x="50" y="684" width="314" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Wgg-xf-OWH"/>
                                 </constraints>
@@ -123,15 +172,12 @@
                         <constraints>
                             <constraint firstItem="ujx-ss-9at" firstAttribute="top" secondItem="xrb-Ag-hCT" secondAttribute="top" constant="177" id="1fC-II-zcy"/>
                             <constraint firstItem="xrb-Ag-hCT" firstAttribute="trailing" secondItem="ujx-ss-9at" secondAttribute="trailing" constant="20" id="4ZM-4e-3nx"/>
-                            <constraint firstItem="n3n-ox-O10" firstAttribute="top" secondItem="EB1-zL-Hri" secondAttribute="bottom" constant="232" id="6Z5-ow-qa3"/>
                             <constraint firstItem="xym-nh-Fpn" firstAttribute="trailing" secondItem="QfJ-QM-lWx" secondAttribute="trailing" id="6rl-Qi-bEK"/>
-                            <constraint firstItem="EB1-zL-Hri" firstAttribute="height" secondItem="xym-nh-Fpn" secondAttribute="height" id="AiO-Dz-n8F"/>
                             <constraint firstItem="xym-nh-Fpn" firstAttribute="top" secondItem="QfJ-QM-lWx" secondAttribute="bottom" constant="25" id="BlE-MU-XB6"/>
                             <constraint firstItem="xrb-Ag-hCT" firstAttribute="trailing" secondItem="n3n-ox-O10" secondAttribute="trailing" constant="50" id="KL9-fa-16L"/>
                             <constraint firstItem="QfJ-QM-lWx" firstAttribute="leading" secondItem="ujx-ss-9at" secondAttribute="leading" id="M1P-Fg-nk5"/>
                             <constraint firstItem="n3n-ox-O10" firstAttribute="leading" secondItem="xrb-Ag-hCT" secondAttribute="leading" constant="50" id="NQB-KU-DKh"/>
                             <constraint firstItem="EB1-zL-Hri" firstAttribute="trailing" secondItem="xym-nh-Fpn" secondAttribute="trailing" id="PVw-dd-6UL"/>
-                            <constraint firstItem="EB1-zL-Hri" firstAttribute="width" secondItem="xym-nh-Fpn" secondAttribute="width" id="R7F-BR-D8V"/>
                             <constraint firstItem="EB1-zL-Hri" firstAttribute="top" secondItem="xym-nh-Fpn" secondAttribute="bottom" constant="25" id="Yjh-Zs-3di"/>
                             <constraint firstItem="xrb-Ag-hCT" firstAttribute="bottom" secondItem="n3n-ox-O10" secondAttribute="bottom" constant="143" id="ZQX-yI-zay"/>
                             <constraint firstItem="QfJ-QM-lWx" firstAttribute="trailing" secondItem="ujx-ss-9at" secondAttribute="trailing" id="eN9-Hh-Pr2"/>
@@ -139,16 +185,14 @@
                             <constraint firstItem="QfJ-QM-lWx" firstAttribute="height" secondItem="ujx-ss-9at" secondAttribute="height" id="fd0-07-KPc"/>
                             <constraint firstItem="ujx-ss-9at" firstAttribute="leading" secondItem="xrb-Ag-hCT" secondAttribute="leading" constant="20" id="i2G-6H-g5C"/>
                             <constraint firstItem="xym-nh-Fpn" firstAttribute="leading" secondItem="QfJ-QM-lWx" secondAttribute="leading" id="jBb-CU-tN6"/>
-                            <constraint firstItem="xym-nh-Fpn" firstAttribute="width" secondItem="QfJ-QM-lWx" secondAttribute="width" id="k91-Dv-8LT"/>
                             <constraint firstItem="QfJ-QM-lWx" firstAttribute="top" secondItem="ujx-ss-9at" secondAttribute="bottom" constant="25" id="lXV-2g-x5f"/>
                             <constraint firstItem="EB1-zL-Hri" firstAttribute="leading" secondItem="xym-nh-Fpn" secondAttribute="leading" id="pVb-kz-6aa"/>
-                            <constraint firstItem="QfJ-QM-lWx" firstAttribute="width" secondItem="ujx-ss-9at" secondAttribute="width" id="xCd-W9-e0Q"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="txtStudentAddress" destination="QfJ-QM-lWx" id="V1r-xn-Zpe"/>
-                        <outlet property="txtStudentEmail" destination="EB1-zL-Hri" id="qcP-kO-AzX"/>
-                        <outlet property="txtStudentMobile" destination="EB1-zL-Hri" id="NI0-dK-NeB"/>
+                        <outlet property="txtStudentEmail" destination="xym-nh-Fpn" id="KMc-K0-Efe"/>
+                        <outlet property="txtStudentMobile" destination="EB1-zL-Hri" id="Ujm-lr-Xjp"/>
                         <outlet property="txtStudentName" destination="ujx-ss-9at" id="bSi-bp-T8A"/>
                     </connections>
                 </viewController>

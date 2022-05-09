@@ -8,11 +8,10 @@
 import UIKit
 
 class StudentFormViewController: UIViewController {
-    @IBOutlet var txtStudentAddress: UITextField!
-    @IBOutlet var txtStudentEmail: UITextField!
-    
     @IBOutlet var txtStudentMobile: UITextField!
+    @IBOutlet var txtStudentAddress: UITextField!
     @IBOutlet var txtStudentName: UITextField!
+    @IBOutlet var txtStudentEmail: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
