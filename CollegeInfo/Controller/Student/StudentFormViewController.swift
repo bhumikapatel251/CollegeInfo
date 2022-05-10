@@ -50,8 +50,7 @@ extension StudentFormViewController{
         guard let studentAddress = txtStudentAddress.text else { return }
         guard let studentEmail = txtStudentEmail.text else { return }
         guard let studentMobile = txtStudentMobile.text else { return }
-        guard let mainCollege = college else{
-            return }
+      
         
         let studentDicts = [
             "studentName": studentName,
@@ -63,6 +62,8 @@ extension StudentFormViewController{
             DatabaseHelper.shareInstance.editStudentData(studentDict: studentDicts, index: indexRow)
             isUpdate = false
         }else{
+            guard let mainCollege = college else{
+                return }
            
         DatabaseHelper.shareInstance.saveStudentData(StudentDict: studentDicts, college: mainCollege)
            

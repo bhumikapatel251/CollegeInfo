@@ -62,6 +62,7 @@ extension StudentListViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete{
+            
             arrStudent = DatabaseHelper.shareInstance.deleteStudentData(index: indexPath.row)
             self.studentTableView.deleteRows(at: [indexPath], with: .automatic)
         }
