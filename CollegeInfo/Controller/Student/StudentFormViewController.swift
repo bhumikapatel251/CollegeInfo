@@ -12,21 +12,32 @@ class StudentFormViewController: UIViewController {
     @IBOutlet var txtStudentAddress: UITextField!
     @IBOutlet var txtStudentName: UITextField!
     @IBOutlet var txtStudentEmail: UITextField!
+    @IBOutlet var btnStudentSave: UIButton!
     var isUpdate = false
     var indexRow = Int()
     var college: College?
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if isUpdate{
+            btnStudentSave.setTitle("Update", for: .normal)
+        }else{
+            btnStudentSave.setTitle("Save", for: .normal)
+            
+        }
+    }
+ 
+
+}
+extension StudentFormViewController{
     @IBAction func btnSaveStudentClicked(_ sender: UIButton) {
         self.StudentSaveData()
         self.navigationController?.popViewController(animated: true)
     }
- 
-
 }
 // Methods
 extension StudentFormViewController{

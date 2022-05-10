@@ -29,6 +29,8 @@ class StudentDetailViewController: UITableViewController {
     }
     @IBAction func btnStudentEdit(_ sender: UIBarButtonItem) {
         let stuformVC = self.storyboard?.instantiateViewController(withIdentifier: "StudentFormViewController") as! StudentFormViewController
+        stuformVC.isUpdate = true
         self.navigationController?.pushViewController(stuformVC, animated: false)
-    }
+        }
 }
+

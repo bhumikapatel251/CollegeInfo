@@ -190,6 +190,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnStudentSave" destination="n3n-ox-O10" id="vRE-Ui-A8G"/>
                         <outlet property="txtStudentAddress" destination="QfJ-QM-lWx" id="V1r-xn-Zpe"/>
                         <outlet property="txtStudentEmail" destination="xym-nh-Fpn" id="KMc-K0-Efe"/>
                         <outlet property="txtStudentMobile" destination="EB1-zL-Hri" id="Ujm-lr-Xjp"/>
@@ -362,7 +363,7 @@
                     <navigationItem key="navigationItem" id="04A-II-LQ4">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Qvk-cW-I5I">
                             <connections>
-                                <action selector="btnStudentEdit:" destination="nho-iZ-UEI" id="dkf-aE-5o9"/>
+                                <action selector="btnStudentEdit:" destination="nho-iZ-UEI" id="LU2-4b-nQB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

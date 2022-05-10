@@ -52,4 +52,8 @@ class CollegeDetailViewController: UITableViewController {
             self.navigationController?.pushViewController(studentVC, animated: true)
         }
     }
+  
 }
+
+
+
