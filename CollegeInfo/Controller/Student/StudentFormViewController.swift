@@ -50,23 +50,23 @@ extension StudentFormViewController{
         guard let studentAddress = txtStudentAddress.text else { return }
         guard let studentEmail = txtStudentEmail.text else { return }
         guard let studentMobile = txtStudentMobile.text else { return }
-        guard let mainCollege = college else{
-            return
-        }
+       
         
-        let studentDict = [
+        let studentDicts = [
             "studentName": studentName,
             "studentAddress": studentAddress,
             "studentEmail": studentEmail,
             "studentMobile": studentMobile
             ]
-//        if isUpdate{
-//            DatabaseHelper.shareInstance.editCollegeData(collegeDict: collegeDict, index: indexRow)
-//            isUpdate = false
-//        }else{
-        DatabaseHelper.shareInstance.saveStudentData(StudentDict: studentDict, college: mainCollege)
+        if isUpdate{
+            DatabaseHelper.shareInstance.editStudentData(studentDict: studentDicts, index: indexRow)
+            isUpdate = false
+        }else{
+            guard let mainCollege = college else{
+                return }
+        DatabaseHelper.shareInstance.saveStudentData(StudentDict: studentDicts, college: mainCollege)
            
-//        }
+        }
        
      }
 }

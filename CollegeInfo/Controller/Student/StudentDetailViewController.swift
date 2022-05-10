@@ -14,6 +14,7 @@ class StudentDetailViewController: UITableViewController {
     @IBOutlet var lblStudentAddress: UILabel!
     @IBOutlet var lblStudentName: UILabel!
     var studentDetail: Student?
+    var indexRow = Int()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,8 +30,10 @@ class StudentDetailViewController: UITableViewController {
     }
     @IBAction func btnStudentEdit(_ sender: UIBarButtonItem) {
         let stuformVC = self.storyboard?.instantiateViewController(withIdentifier: "StudentFormViewController") as! StudentFormViewController
+
         stuformVC.isUpdate = true
         stuformVC.studentDetails = studentDetail
+        stuformVC.indexRow = indexRow
         self.navigationController?.pushViewController(stuformVC, animated: false)
         }
 }

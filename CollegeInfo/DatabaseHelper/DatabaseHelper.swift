@@ -102,4 +102,18 @@ class DatabaseHelper: NSObject {
         }
         return studentData
     }
+    func editStudentData(studentDict: [String: String], index:Int){
+        var student = self.getAllStudentData()
+        // origanal data
+        student[index].name = studentDict["studentName"]
+        student[index].address = studentDict["studentAddress"]
+        student[index].email = studentDict["studentEmail"]
+        student[index].mobile = studentDict["studentMobile"]
+        do{
+            try context.save()
+        }   catch{
+            print("error in edit data")
+            
+        }
+    }
 }
