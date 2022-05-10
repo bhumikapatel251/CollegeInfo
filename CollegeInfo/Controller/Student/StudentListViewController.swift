@@ -21,9 +21,12 @@ class StudentListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         if college?.students?.allObjects != nil{
             arrStudent = college?.students?.allObjects as! [Student]
+            self.studentTableView.reloadData()
+            
         }
       //  self.arrStudent = DatabaseHelper.shareInstance.getAllStudentData()
-        self.studentTableView.reloadData()
+        //self.studentTableView.reloadData()
+        
     }
     
     @IBAction func btnAddStudentClicked(_ sender: UIBarButtonItem) {
@@ -40,23 +43,33 @@ extension StudentListViewController: UITableViewDelegate, UITableViewDataSource{
         return arrStudent.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StudentListViewCell", for: indexPath) as! StudentListViewCell
-        cell.student = arrStudent[indexPath.row]
-        return cell
+        let cell1 = tableView.dequeueReusableCell(withIdentifier: "StudentListViewCell", for: indexPath) as! StudentListViewCell
+        cell1.student = arrStudent[indexPath.row]
+        return cell1
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let studentDetaliVC = self.storyboard?.instantiateViewController(withIdentifier: "StudentDetailViewController") as! StudentDetailViewController
         studentDetaliVC.studentDetail = arrStudent[indexPath.row]
         studentDetaliVC.indexRow = indexPath.row
-        self.navigationController?.pushViewController(studentDetaliVC, animated: true)
+        self.navigationController?.pushViewController(studentDetaliVC, animated: false)
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
         if editingStyle == .delete{
             arrStudent = DatabaseHelper.shareInstance.deleteStudentData(index: indexPath.row)
             self.studentTableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete{
+//            arrStudent = DatabaseHelper.shareInstance.deleteStudentData(index: indexPath.row)
+//            self.studentTableView.deleteRows(at: [indexPath], with: .automatic)
+//        }
+//    }
 }

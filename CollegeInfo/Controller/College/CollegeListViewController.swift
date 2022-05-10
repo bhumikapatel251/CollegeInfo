@@ -52,8 +52,9 @@ extension CollegeListViewController: UITableViewDelegate, UITableViewDataSource{
         if editingStyle == .delete{
             // delete from index and coredatabase
             arrCollege = DatabaseHelper.shareInstance.deleteCollegeData(index: indexPath.row)
+         //   self.collegeListTableView.deleteRows(at: [indexPath], with: .automatic)
             self.collegeListTableView.deleteRows(at: [indexPath], with: .automatic)
         }
+        }
     }
-}
 
