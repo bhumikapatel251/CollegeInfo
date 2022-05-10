@@ -13,12 +13,16 @@ class StudentFormViewController: UIViewController {
     @IBOutlet var txtStudentName: UITextField!
     @IBOutlet var txtStudentEmail: UITextField!
     @IBOutlet var btnStudentSave: UIButton!
+    var studentDetails: Student?
     var isUpdate = false
     var indexRow = Int()
     var college: College?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.txtStudentName.text = studentDetails?.name
+        self.txtStudentAddress.text = studentDetails?.address
+        self.txtStudentEmail.text = studentDetails?.email
+        self.txtStudentMobile.text = studentDetails?.mobile
       
     }
     
